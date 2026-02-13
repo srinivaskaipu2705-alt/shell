@@ -2,6 +2,7 @@
 
 person1=sri
 person2=sai
+
 echo "$person1:: hi $person2, how are you doing?"
 echo "$person2:: hi $person1, i am doing good, how about you?"
 echo "$person1:: i am doing good too, thanks for asking!"

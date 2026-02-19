@@ -8,6 +8,7 @@ echo "second variable: $2"
 echo "number of variables passed: $#"  
 echo "current directory: $PWD"
 echo "home directory: $HOME"
-echo "current user: $USER"  
+echo "current user: $USER" 
+sleep 10  & 
 echo "exit status of last command: $?"
 echo "process ID of current script: $$"

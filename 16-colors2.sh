@@ -29,30 +29,26 @@ if [ $? -eq 0 ]; then
     echo -e "$Y MySQL is already installed $N"
      else 
     echo -e "$Y MySQL is not installed, installing now... $N"
+    dnf install mysql -y
     validate $? "MySQL"
 fi
 
-dnf install mysql -y
-VALIDATE $? "MySQL"
 
 dnf list installed nginx # Check if Nginx is already installed
 if [ $? -eq 0 ]; then
     echo -e "$Y Nginx is already installed $N"
     else 
     echo -e "$Y Nginx is not installed, installing now... $N"
+    dnf install nginx -y
     validate $? "Nginx"
 fi
 
-dnf install nginx -y
-VALIDATE $? "Nginx"
 
 dnf list installed python3 # Check if Python3 is already installed
 if [ $? -eq 0 ]; then
     echo -e "$Y Python3 is already installed $N"
     else 
     echo -e "$Y Python3 is not installed, installing now... $N"
+    dnf install python3 -y
     validate $? "Python3"
 fi
-
-dnf install python3 -y
-VALIDATE $? "Python3"

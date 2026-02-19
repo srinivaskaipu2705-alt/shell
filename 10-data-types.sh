@@ -6,5 +6,5 @@ STRING1="Hello"
 STRING2="World" 
 SUM=$(($NUMBER1+$NUMBER2))
 
-ECHO "The sum of $NUMBER1 and $NUMBER2 is: $SUM"
+ECHO "The sum of NUMBER1 and NUMBER2 is: $SUM"
 ECHO "$STRING1 $STRING2"  

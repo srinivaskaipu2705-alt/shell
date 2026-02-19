@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$1
+NUMBER1=$1
 NUMBER2=$2
 
 if [ $NUMBER1 -lt 10 ]; then

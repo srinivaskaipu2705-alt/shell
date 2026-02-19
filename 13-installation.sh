@@ -1,9 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
+
 if [ $USERID -eq 0 ]; then
     echo "i am root user"
-    exit 0
     else 
     echo "erroe:: you are not root user, please run this script as root user"
     exit 1

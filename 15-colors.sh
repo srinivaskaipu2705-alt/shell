@@ -7,5 +7,5 @@ B='\033[0;34m'
 N='\033[0m' # No Color
 
 echo -e "$R This is red text $N"
-echo -e "$G  This is green text $N"
+echo -e "$G This is green text $N"
 echo -e "$Y This is yellow text $N"         

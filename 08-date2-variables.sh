@@ -2,7 +2,7 @@
 
 start_time=$(date +%s)
 
-sleep 10 &
+sleep 10 # Simulating a time-consuming task by sleeping for 10 seconds
 
 end_time=$(date +%s)
 

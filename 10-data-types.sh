@@ -11,4 +11,4 @@ echo "$STRING1 $STRING2"
 
 LEADERS=("Alice" "Bob" "Charlie")
 
-echo "Leaders: $LEADERS[0]"
+echo "Leaders: ${LEADERS[0]}"

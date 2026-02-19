@@ -9,17 +9,17 @@ N='\033[0m' # No Color
 USERID=$(id -u)
 
 if [ $USERID -eq 0 ]; then
-    echo "$B I am root user $N"
+    echo -e "$B I am root user $N"
     else 
-    echo "$R error:: you are not root user, please run this script as root user $N"
+    echo -e "$R error:: you are not root user, please run this script as root user $N"
     exit 1
 fi
 
 VALIDATE(){ # function to validate the exit status of the last command
     if [ $1 -eq 0 ]; then
-        echo "$G $2 installation successful $N"
+        echo -e "$G $2 installation successful $N"
     else 
-        echo "$R error:: $2 installation failed $N"
+        echo -e "$R error:: $2 installation failed $N"
         exit 1
     fi
 }

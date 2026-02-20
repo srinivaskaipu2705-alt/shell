@@ -34,20 +34,20 @@ VALIDATE(){ # function to validate the exit status of the last command
 dnf list installed mysql &>>$LOGS_FILE # Check if MySQL is already installed
 if [ $? -eq 0 ]; then
     echo -e "$Y MySQL is already installed $N"
+    validate $? "MySQL"
      else 
     echo -e "$Y MySQL is not installed, installing now... $N"
     dnf install mysql -y &>>$LOGS_FILE
-    validate $? "MySQL"
 fi
 
 
 dnf list installed nginx &>>$LOGS_FILE # Check if Nginx is already installed
 if [ $? -eq 0 ]; then
     echo -e "$Y Nginx is already installed $N"
+    validate $? "Nginx"
     else 
     echo -e "$Y Nginx is not installed, installing now... $N"
     dnf install nginx -y &>>$LOGS_FILE
-    validate $? "Nginx"
 fi
 
 

@@ -37,7 +37,7 @@ if [ $? -eq 0 ]; then
     else 
     echo -e "$Y MySQL is not installed, installing now... $N" | tee -a $LOGS_FILE
     dnf install mysql -y &>>$LOGS_FILE
-    validate $? "MySQL"
+    VALIDATE $? "MySQL"
 fi
 
 
@@ -47,7 +47,7 @@ if [ $? -eq 0 ]; then
     else 
     echo -e "$Y Nginx is not installed, installing now... $N" | tee -a $LOGS_FILE
     dnf install nginx -y &>>$LOGS_FILE
-    validate $? "Nginx"
+    VALIDATE $? "Nginx"
 fi
 
 
@@ -57,5 +57,5 @@ if [ $? -eq 0 ]; then
     else 
     echo -e "$Y Python3 is not installed, installing now... $N" | tee -a $LOGS_FILE
     dnf install python3 -y &>>$LOGS_FILE
-    validate $? "Python3"
+    VALIDATE $? "Python3"
 fi

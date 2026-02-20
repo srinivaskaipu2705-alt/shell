@@ -35,6 +35,6 @@ VALIDATE(){ # function to validate the exit status of the last command
 
 for package in $@
 do
-    # chekk if the package is already installed
+    # check if the package is already installed
     echo -e "$Y package name: $package $N"
 done

@@ -30,7 +30,7 @@ if [ $? -eq 0 ]; then
      else 
     echo -e "$Y MySQL is not installed, installing now... $N"
     dnf install mysql -y
-    validate $? "MySQL"
+    VALIDATE $? "MySQL"
 fi
 
 
@@ -40,7 +40,7 @@ if [ $? -eq 0 ]; then
     else 
     echo -e "$Y Nginx is not installed, installing now... $N"
     dnf install nginx -y
-    validate $? "Nginx"
+    VALIDATE $? "Nginx"
 fi
 
 
@@ -50,5 +50,5 @@ if [ $? -eq 0 ]; then
     else 
     echo -e "$Y Python3 is not installed, installing now... $N"
     dnf install python3 -y
-    validate $? "Python3"
+    VALIDATE $? "Python3"
 fi

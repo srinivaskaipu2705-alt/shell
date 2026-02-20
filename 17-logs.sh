@@ -58,4 +58,4 @@ if [ $? -eq 0 ]; then
     echo -e "$Y Python3 is not installed, installing now... $N" | tee -a $LOGS_FILE
     dnf install python3 -y &>>$LOGS_FILE
     VALIDATE $? "Python3"
-fi
+ fi

@@ -36,5 +36,14 @@ VALIDATE(){ # function to validate the exit status of the last command
 for package in $@
 do
     # check if the package is already installed
-    echo -e "$Y package name: $package $N"
+   dnf list installed $package &>>$LOGS_FILE
+   
+   #if exit code is 0, package is already installed
+   if [ $? -eq 0 ]; then
+        echo -e "$Y $package is already installed $N" | tee -a $LOGS_FILE
+    else 
+        echo -e "$Y Installing $package... $N" | tee -a $LOGS_FILE
+        dnf install $package -y &>>$LOGS_FILE
+        VALIDATE $? "$package"
+    fi
 done
